@@ -15,8 +15,11 @@ export class TokenInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     let authToken="1234567890123456"
     console.log(authToken)
-   const modifiedReq=request.clone({headers:request.headers.set("authToken",authToken)})
+  //  const modifiedReq=request.clone({headers:request.headers.set("authToken",authToken)})
    
-    return next.handle(request);
+  //   return next.handle(request);
+    
+    return next.handle(request.clone({ setHeaders: { authToken } }));
+
   }
 }

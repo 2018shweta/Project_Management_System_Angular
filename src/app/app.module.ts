@@ -12,13 +12,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LogOutComponent } from './log-out/log-out.component';
 import { TokenInterceptor } from './token.interceptor';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { AllUsersComponent } from './all-users/all-users.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SignUpComponent,
     LoginComponent,
-    LogOutComponent
+    LogOutComponent,
+    DashboardComponent,
+
+    AllUsersComponent
   ],
   imports: [
     BrowserModule,

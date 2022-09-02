@@ -53,6 +53,20 @@
     *ngIf="userForm.get('password')?.touched && userForm.get('password')?.hasError('strongPassword')">
      Please Select Strong Password [include <br> 1) [ @ or $ or # ] <br>2) Upper Letter <br>3) Lower Letter ] 
 </span>
+
+<div class="form-group">
+  <label>ContactNo.</label>
+  <input type="text" class="form-control p_input"formControlName="contactNo">
+</div>
+<span class="err"
+*ngIf="userForm.get('firstName')?.touched && userForm.get('firstName')?.hasError('required')">please enter ContactNo</span>
+<span class="err"
+        *ngIf="userForm.get('firstName')?.touched  && userForm.get('firstName')?.hasError('minlength')">ContactNo
+        Should be in 10 length </span>
+
+
+
+
                   <div class="form-group">
                     <label>Address</label>
                     <input type="text" class="form-control p_input"formControlName="address">

@@ -3,8 +3,8 @@
     <!-- partial:partials/_sidebar.html -->
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-        <!--<a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo"></a> -->
-        <h1><span>A D M I N </span></h1>
+      <!-- <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo"></a>--> 
+      <h1><span>e-Commerce</span></h1>
         <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo"></a>
       </div>
       <ul class="nav">
@@ -59,7 +59,7 @@
         </li>
         
         <li class="nav-item menu-items active">
-          <a class="nav-link" href="">
+          <a class="nav-link" href="index.html">
             <span class="menu-icon">
               <i class="mdi mdi-speedometer"></i>
             </span>
@@ -74,36 +74,6 @@
               <i class="mdi mdi-table-large"></i>
             </span>
             <span class="menu-title">Tables</span>
-          </a>
-        </li>
-
-         <!-- add Category-->
-         <li class="nav-item menu-items">
-          <a class="nav-link" href="pages/tables/basic-table.html">
-            <span class="menu-icon">
-              <i class="mdi mdi-table-large"></i>
-            </span>
-            <span class="menu-title">Add Category</span>
-          </a>
-        </li>
-
-        <!-- add SubCategory-->
-        <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/tables/basic-table.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-table-large"></i>
-              </span>
-              <span class="menu-title">Add SubCategory</span>
-            </a>
-          </li>
-
-        <!-- all users -->
-        <li class="nav-item menu-items">
-          <a class="nav-link" routerLink="/allusers">
-            <span class="menu-icon">
-              <i class="mdi mdi-table-large"></i>
-            </span>
-            <span class="menu-title">All Users</span>
           </a>
         </li>
         
@@ -348,11 +318,77 @@
           
           
           
+          
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         
         <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+              
+              
+              
+              
+              <div class="row ">
+                <div class="col-12 grid-margin">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Users Details</h4>
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Profile </th>
+                              <th> FirstName </th>
+                              <th> LastName</th>
+                              <th> Email </th>
+                              <th> Gender </th>
+                              <th> Address </th>
+                              <th> Contact No.</th>
+                              <th align="center"> Action </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+    
+    
+                            <!--START OF ONE RAOW-->
+                            <tr *ngIf="user" >
+    <td>
+                                <div class="form-check form-check-muted m-0">
+                                  <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input">
+                                    <img src="assets/images/faces/face1.jpg" alt="image">
+                                  <i class="input-helper"></i></label>
+                                </div>
+                              </td>
+                              <td>
+                                <span class="ps-2">{{this.user}}</span>
+                              </td>
+                              <td>  </td>
+                              <td>  </td>
+                              <td> </td>
+                              <td> </td>
+                              <td>  </td>
+                              <td>
+                                <!--<div class="badge badge-outline-success"(click)="deleteUser(u.userId)">DELETE</div>-->
+                                
+                              </td>
+                            </tr>
+    
+                            <!--AND OF ONE RAOW-->
+                            
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+            </div>
       </div>
       <!-- main-panel ends -->
     </div>

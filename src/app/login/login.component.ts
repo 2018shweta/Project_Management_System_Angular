@@ -34,11 +34,13 @@ login()
     // console.log(res.data.user.role.roleName)
     console.log("data",res)
     
-    console.log(res.data.role.roleName)
+    //console.log(res.data.role.roleName)
+
   this.toastr.success("login done")
+  localStorage.setItem("userId",res.data.userId)//local storage ma set karava mate 
   if(res.data.role.roleName=="user"){
-    console.log(res.data.role.roleName)
-  this.router.navigateByUrl("/dashborad")}
+   // console.log(res.data.role.roleName)
+  this.router.navigateByUrl("/dashboard")}
   else if(res.data.role.roleName=="admin"){
     
     this.router.navigateByUrl("/home") 
