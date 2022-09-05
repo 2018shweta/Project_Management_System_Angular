@@ -18,6 +18,9 @@ export class TokenInterceptor implements HttpInterceptor {
   //  const modifiedReq=request.clone({headers:request.headers.set("authToken",authToken)})
    
   //   return next.handle(request);
+  console.log(request);
+  console.log(request.clone({ setHeaders: { authToken } }));
+  
     
     return next.handle(request.clone({ setHeaders: { authToken } }));
 

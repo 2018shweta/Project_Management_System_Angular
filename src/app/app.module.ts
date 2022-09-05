@@ -15,6 +15,11 @@ import { TokenInterceptor } from './token.interceptor';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { AllUsersComponent } from './all-users/all-users.component';
+import { AddCategoryComponent } from './add-category/add-category.component';
+import { AllCategoryComponent } from './all-category/all-category.component';
+import { AddSubCategoryComponent } from './add-sub-category/add-sub-category.component';
+import { AllSubCategoryComponent } from './all-sub-category/all-sub-category.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +29,12 @@ import { AllUsersComponent } from './all-users/all-users.component';
     LogOutComponent,
     DashboardComponent,
 
-    AllUsersComponent
+    AllUsersComponent,
+     AddCategoryComponent,
+     AllCategoryComponent,
+     AddSubCategoryComponent,
+     AllSubCategoryComponent,
+     EditUserComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +45,7 @@ import { AllUsersComponent } from './all-users/all-users.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [{provide:HTTP_INTERCEPTORS,useClass:TokenInterceptor,multi:true}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

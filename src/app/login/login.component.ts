@@ -38,6 +38,7 @@ login()
 
   this.toastr.success("login done")
   localStorage.setItem("userId",res.data.userId)//local storage ma set karava mate 
+  localStorage.setItem("userName",res.data.firstName)
   if(res.data.role.roleName=="user"){
    // console.log(res.data.role.roleName)
   this.router.navigateByUrl("/dashboard")}

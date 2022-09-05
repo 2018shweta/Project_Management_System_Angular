@@ -43,6 +43,7 @@ export class SignUpComponent implements OnInit {
           this.tsService.success("signup done", "", { timeOut: 30000 });
           this.router.navigateByUrl("/login");
         }
+        
       }, err => {
         console.log(err)
       

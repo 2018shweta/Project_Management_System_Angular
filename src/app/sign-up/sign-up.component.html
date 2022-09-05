@@ -59,9 +59,9 @@
   <input type="text" class="form-control p_input"formControlName="contactNo">
 </div>
 <span class="err"
-*ngIf="userForm.get('firstName')?.touched && userForm.get('firstName')?.hasError('required')">please enter ContactNo</span>
+*ngIf="userForm.get('contactNo')?.touched && userForm.get('contactNo')?.hasError('required')">please enter ContactNo</span>
 <span class="err"
-        *ngIf="userForm.get('firstName')?.touched  && userForm.get('firstName')?.hasError('minlength')">ContactNo
+        *ngIf="userForm.get('contactNo')?.touched  && userForm.get('contactNo')?.hasError('minlength')">ContactNo
         Should be in 10 length </span>
 
 

@@ -10,27 +10,31 @@ import { UserServiceService } from '../user-service.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-user:number=0;
+users:any={}
+userId:number=0
 
   constructor(private userService:UserServiceService,private toastr: ToastrService, private router: Router) { }
 
   
   ngOnInit(): void {
-    localStorage.getItem("userId")
     const uid = localStorage.getItem("userId");//value store in variable
-    console.log("localUserId",localStorage.getItem('userId'));
     console.log("dashboard on init")
    this.userService.getUserById(uid).subscribe(resp=>{
-    console.log("user one only",resp)
-    this.user=resp.data;
-    console.log("this user",this.user)
-    console.log("user in",Object.values)
+    // console.log("user one only",resp)
+   
+    this.users=resp.data
+    // console.log("exam.."+this.users)
+    
+    
 
    })
+
+  }
+  
   }
 
   
 
 
 
-}
+

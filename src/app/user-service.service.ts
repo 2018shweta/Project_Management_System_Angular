@@ -20,8 +20,10 @@ export class UserServiceService {
   }
 
   //update
-  getUserByIdApi(userId:any):Observable<any>{
-    return this.http.get(environment.url+"public_api/update/"+userId)
+  getUserByIdApi(user:any):Observable<any>{
+    console.log("update");
+    console.log(user+"user api data")
+    return this.http.put(environment.url+"public_api/update/",user)
   }
 //getUserById
   getUserById(userId:any):Observable<any>{

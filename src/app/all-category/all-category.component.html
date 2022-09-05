@@ -3,7 +3,7 @@
     <!-- partial:partials/_sidebar.html -->
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-        <!--<a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo"></a>-->
+        <!--<a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo"></a> -->
         <h1><span>A D M I N </span></h1>
         <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo"></a>
       </div>
@@ -59,7 +59,7 @@
         </li>
         
         <li class="nav-item menu-items active">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="">
             <span class="menu-icon">
               <i class="mdi mdi-speedometer"></i>
             </span>
@@ -67,8 +67,18 @@
           </a>
         </li>
         
-        <!-- add Category-->
+        
         <li class="nav-item menu-items">
+          <a class="nav-link" href="pages/tables/basic-table.html">
+            <span class="menu-icon">
+              <i class="mdi mdi-table-large"></i>
+            </span>
+            <span class="menu-title">Tables</span>
+          </a>
+        </li>
+
+         <!-- add Category-->
+         <li class="nav-item menu-items">
           <a class="nav-link" routerLink="/addcategory">
             <span class="menu-icon">
               <i class="mdi mdi-table-large"></i>
@@ -87,7 +97,6 @@
             </a>
           </li>
 
-
         <!-- all users -->
         <li class="nav-item menu-items">
           <a class="nav-link" routerLink="/allusers">
@@ -97,28 +106,28 @@
             <span class="menu-title">All Users</span>
           </a>
         </li>
+
+        <!-- all category -->
+        <li class="nav-item menu-items">
+          <a class="nav-link" routerLink="/allcategory">
+            <span class="menu-icon">
+              <i class="mdi mdi-table-large"></i>
+            </span>
+            <span class="menu-title">All Category</span>
+          </a>
+        </li>
+
+        <!-- all subcategory -->
+        <li class="nav-item menu-items">
+          <a class="nav-link" routerLink="/allsubcategory">
+            <span class="menu-icon">
+              <i class="mdi mdi-table-large"></i>
+            </span>
+            <span class="menu-title">All SubCategory</span>
+          </a>
+        </li>
         
         
-         <!-- all category -->
-         <li class="nav-item menu-items">
-            <a class="nav-link" routerLink="/allcategory">
-              <span class="menu-icon">
-                <i class="mdi mdi-table-large"></i>
-              </span>
-              <span class="menu-title">All Category</span>
-            </a>
-          </li>
-  
-          <!-- all subcategory -->
-          <li class="nav-item menu-items">
-            <a class="nav-link" routerLink="/allsubcategory">
-              <span class="menu-icon">
-                <i class="mdi mdi-table-large"></i>
-              </span>
-              <span class="menu-title">All SubCategory</span>
-            </a>
-          </li>
-          
         
         
       </ul>
@@ -356,25 +365,22 @@
       <div class="main-panel">
         <div class="content-wrapper">
           
+          <!-------------------------------      table mate ----------------------------------------------------------              -->
+
           
-          
-          
+
           <div class="row ">
             <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Users Details</h4>
+                  <h4 class="card-title">Category Details</h4>
                   <div class="table-responsive">
                     <table class="table">
                       <thead>
                         <tr>
                           <th>Profile </th>
                           <th> FirstName </th>
-                          <th> LastName</th>
-                          <th> Email </th>
-                          <th> Gender </th>
-                          <th> Address </th>
-                          <th> Contact No.</th>
+                          
                           <th align="center"> Action </th>
                         </tr>
                       </thead>
@@ -382,7 +388,7 @@
 
 
                         <!--START OF ONE RAOW-->
-                        <tr *ngFor="let u of users">
+                        <tr *ngFor="let c of categories">
 <td>
                             <div class="form-check form-check-muted m-0">
                               <label class="form-check-label">
@@ -392,15 +398,27 @@
                             </div>
                           </td>
                           <td>
-                            <span class="ps-2">{{u.firstName}}</span>
+                            <span class="ps-2">{{c.categoryName}}</span>
                           </td>
-                          <td> {{u.lastName}} </td>
-                          <td> {{u.email}} </td>
-                          <td> {{u.gender}} </td>
-                          <td> {{u.address}}</td>
-                          <td> {{u.contactNo}} </td>
+                          
+                          <!--<td>
+                            <div class="badge badge-outline-success"(click)="deleteUser(c.categoryId)">DELETE</div>
+                            <div class="template-demo">
+                      <button type="button" class="btn btn-primary btn-fw">Primary</button>
+                      <button type="button" class="btn btn-secondary btn-fw">Secondary</button>
+                      <button type="button" class="btn btn-success btn-fw">Success</button>
+                      <button type="button" class="btn btn-danger btn-fw">Danger</button>
+                      <button type="button" class="btn btn-warning btn-fw">Warning</button>
+                      <button type="button" class="btn btn-info btn-fw">Info</button>
+                      <button type="button" class="btn btn-light btn-fw">Light</button>
+                      <button type="button" class="btn btn-dark btn-fw">Dark</button>
+                      <button type="button" class="btn btn-link btn-fw">Link</button>
+                    </div>
+                          </td>-->
+
                           <td>
-                            <div class="badge badge-outline-success"(click)="deleteUser(u.userId)">DELETE</div>
+                            <div class="badge badge-outline-success"(click)="deleteCategory(c.categoryId)">DELETE</div>|
+                            <div class="badge badge-outline-success">Disable</div>
                             
                           </td>
                         </tr>
@@ -415,8 +433,19 @@
               </div>
             </div>
           </div>
+
+
+
+
+
+
+
+
+
+
+
           
-          
+          <!-----------------------------table end----------------------------------------------------------------------------------------->
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
