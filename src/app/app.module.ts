@@ -20,6 +20,8 @@ import { AllCategoryComponent } from './all-category/all-category.component';
 import { AddSubCategoryComponent } from './add-sub-category/add-sub-category.component';
 import { AllSubCategoryComponent } from './all-sub-category/all-sub-category.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { AllProductsComponent } from './all-products/all-products.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { EditUserComponent } from './edit-user/edit-user.component';
      AllCategoryComponent,
      AddSubCategoryComponent,
      AllSubCategoryComponent,
-     EditUserComponent
+     EditUserComponent,
+     AddProductComponent,
+     AllProductsComponent
   ],
   imports: [
     BrowserModule,

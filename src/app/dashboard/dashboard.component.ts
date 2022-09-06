@@ -12,7 +12,7 @@ import { UserServiceService } from '../user-service.service';
 export class DashboardComponent implements OnInit {
 users:any={}
 userId:number=0
-
+usernm:string=""
   constructor(private userService:UserServiceService,private toastr: ToastrService, private router: Router) { }
 
   
@@ -24,7 +24,7 @@ userId:number=0
    
     this.users=resp.data
     // console.log("exam.."+this.users)
-    
+    const usnam=localStorage.getItem("userName")
     
 
    })

@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddCategoryComponent } from './add-category/add-category.component';
+import { AddProductComponent } from './add-product/add-product.component';
 import { AddSubCategoryComponent } from './add-sub-category/add-sub-category.component';
 import { AllCategoryComponent } from './all-category/all-category.component';
+import { AllProductsComponent } from './all-products/all-products.component';
 import { AllSubCategoryComponent } from './all-sub-category/all-sub-category.component';
 import { AllUsersComponent } from './all-users/all-users.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -25,6 +27,8 @@ const routes: Routes = [
   {component:AllCategoryComponent,path:"allcategory"},
   {component:AllSubCategoryComponent,path:"allsubcategory"},
   {component:EditUserComponent,path:"edituser/:userId"},
+  {component:AddProductComponent,path:"addproduct"},
+  {component:AllProductsComponent,path:"allproducts"},
   
 ];
 

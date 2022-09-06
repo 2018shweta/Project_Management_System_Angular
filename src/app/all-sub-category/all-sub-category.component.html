@@ -68,14 +68,14 @@
         </li>
         
         
-        <li class="nav-item menu-items">
+      <!--  <li class="nav-item menu-items">
           <a class="nav-link" href="pages/tables/basic-table.html">
             <span class="menu-icon">
               <i class="mdi mdi-table-large"></i>
             </span>
             <span class="menu-title">Tables</span>
           </a>
-        </li>
+        </li>-->
 
          <!-- add Category-->
          <li class="nav-item menu-items">
@@ -128,6 +128,26 @@
         </li>
         
         
+         <!-- add product -->
+         <li class="nav-item menu-items">
+          <a class="nav-link" routerLink="/addproduct">
+            <span class="menu-icon">
+              <i class="mdi mdi-table-large"></i>
+            </span>
+            <span class="menu-title">Add Product</span>
+          </a>
+        </li>
+
+        
+        <!-- all Products -->
+        <li class="nav-item menu-items">
+          <a class="nav-link" routerLink="/allproducts">
+            <span class="menu-icon">
+              <i class="mdi mdi-table-large"></i>
+            </span>
+            <span class="menu-title">All Products</span>
+          </a>
+        </li>
         
         
       </ul>
@@ -366,6 +386,96 @@
         <div class="content-wrapper">
           
           
+
+
+
+
+
+
+
+
+
+           <!-------------------------------      table mate ----------------------------------------------------------              -->
+
+          
+
+           <div class="row ">
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">SubCategory Details</h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Profile </th>
+                          <th> SubCategory Name </th>
+                          
+                          <th align="center"> Action </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+
+                        <!--START OF ONE RAOW-->
+                        <tr *ngFor="let sc of subCategories">
+<td>
+                            <div class="form-check form-check-muted m-0">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">
+                                <img src="assets/images/faces/face1.jpg" alt="image">
+                              <i class="input-helper"></i></label>
+                            </div>
+                          </td>
+                          <td>
+                            <span class="ps-2">{{sc.subCategoryName}}</span>
+                          </td>
+                          
+                          <!--<td>
+                            <div class="badge badge-outline-success"(click)="deleteUser(c.categoryId)">DELETE</div>
+                            <div class="template-demo">
+                      <button type="button" class="btn btn-primary btn-fw">Primary</button>
+                      <button type="button" class="btn btn-secondary btn-fw">Secondary</button>
+                      <button type="button" class="btn btn-success btn-fw">Success</button>
+                      <button type="button" class="btn btn-danger btn-fw">Danger</button>
+                      <button type="button" class="btn btn-warning btn-fw">Warning</button>
+                      <button type="button" class="btn btn-info btn-fw">Info</button>
+                      <button type="button" class="btn btn-light btn-fw">Light</button>
+                      <button type="button" class="btn btn-dark btn-fw">Dark</button>
+                      <button type="button" class="btn btn-link btn-fw">Link</button>
+                    </div>
+                          </td>-->
+
+                          <td>
+                            <div class="badge badge-outline-success"(click)="deleteSubCategory(sc.subCategoryId)">DELETE</div>|
+                            <div class="badge badge-outline-success">Disable</div>
+                            
+                          </td>
+                        </tr>
+
+                        <!--AND OF ONE RAOW-->
+                        
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+          
+          <!-----------------------------table end----------------------------------------------------------------------------------------->
           
           
         </div>

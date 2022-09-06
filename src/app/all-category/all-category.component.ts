@@ -36,7 +36,7 @@ console.log(categoryId)
       this.router.navigateByUrl("/allcategory")
     },err=>{
       console.log("err"+err)
-      this.toastr.error(err)
+      this.toastr.error("You Do Not Delete Category")
     })
   }
 

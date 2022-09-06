@@ -13,10 +13,10 @@ export class AddCategoryComponent implements OnInit {
  categoryForm:FormGroup
   constructor(private tsService: ToastrService, private router: Router,private categoryService:CategoryService) {
     
-    this.categoryForm = new FormGroup({
+   this.categoryForm = new FormGroup({
       categoryName: new FormControl('', [Validators.required]),
       isActive:new FormControl('true')
-    })
+    }) 
   }
 
   ngOnInit(): void {
