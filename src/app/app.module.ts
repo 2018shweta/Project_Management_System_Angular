@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { DialogModule } from "primeng/dialog";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -22,6 +22,7 @@ import { AllSubCategoryComponent } from './all-sub-category/all-sub-category.com
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { AllProductsComponent } from './all-products/all-products.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { AllProductsComponent } from './all-products/all-products.component';
      AllSubCategoryComponent,
      EditUserComponent,
      AddProductComponent,
-     AllProductsComponent
+     AllProductsComponent,
+     ForgotpasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { AllProductsComponent } from './all-products/all-products.component';
     ToastrModule.forRoot(),
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,7 @@ import { AllSubCategoryComponent } from './all-sub-category/all-sub-category.com
 import { AllUsersComponent } from './all-users/all-users.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { HomeComponent } from './home/home.component';
 import { LogOutComponent } from './log-out/log-out.component';
 import { LoginComponent } from './login/login.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
   {component:EditUserComponent,path:"edituser/:userId"},
   {component:AddProductComponent,path:"addproduct"},
   {component:AllProductsComponent,path:"allproducts"},
+  {component:ForgotpasswordComponent,path:"forgotpassword"},
   
 ];
 

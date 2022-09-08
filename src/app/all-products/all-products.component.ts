@@ -22,4 +22,15 @@ products:Array<any>=[]
 
   }
 
+  deleteProduct(productId:any)
+  {
+    this.productService.deleteProduct(productId).subscribe(resp=>{
+      this.toastr.success("Category Deleted...")
+      this.products=this.products.filter(p=>p.productId!=productId)
+      this.router.navigateByUrl("/allproduct")
+    },err=>{
+      this.toastr.success("errer")
+    })
+  }
+
 }
